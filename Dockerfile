@@ -1,4 +1,4 @@
-FROM pulumi/pulumi-python
+FROM pulumi/pulumi-python:4.3.0
 
 COPY ./requirements.txt ./
 
