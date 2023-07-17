@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setup(
     name='container-pulumi-native',
-    version='0.1.0',
+    version='0.2.0',
     description='Container for pulumi-native to be used in cloudbuild pipelines.',
     long_description=long_description,
     packages=find_packages(),
