@@ -1,0 +1,15 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - '-c'
+      - |-
+        export _VERSION=$(cat version.txt)
+        docker build -t ${_LOCATION}-docker.pkg.dev/${PROJECT_ID}/support-containers/pulumi-native:latest \
+          -t ${_LOCATION}-docker.pkg.dev/${PROJECT_ID}/support-containers/pulumi-native:${COMMIT_SHA} \
+          -t ${_LOCATION}-docker.pkg.dev/${PROJECT_ID}/support-containers/pulumi-native:$$_VERSION \
+          .
+    id: 'build-pulumi-native-image'
+    waitFor: ['-']
+
+images: ['${_LOCATION}-docker.pkg.dev/${PROJECT_ID}/support-containers/pulumi-native']

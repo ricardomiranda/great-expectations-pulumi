@@ -1,0 +1,12 @@
+arpeggio
+attrs
+dill
+grpcio
+parver
+protobuf
+pulumi-google-native
+pulumi
+pyyaml
+semver
+six
+typing-extensions
